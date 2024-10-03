@@ -10,14 +10,13 @@ csvfile = '/root/taxi_zone_lookup.csv'
 
 with open(csvfile, 'wb') as file:
     file.write(r.content)
-file.close()
+
 
 
 with open(csvfile, 'r') as file:
     reader = csv.reader(file)
     header = next(reader)
     data = list(reader)  
-file.close()
 
 total_records = len(data)
 uniqueborough = sorted(set(row[1] for row in data)) 
