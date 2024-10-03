@@ -16,7 +16,7 @@ with open(csvfile, 'r') as file:
     reader = csv.reader(file)
     header = next(reader)
     data = list(reader)  
-
+    csvfile.close()
 
 total_records = len(data)
 uniqueborough = sorted(set(row[1] for row in data)) 
