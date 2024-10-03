@@ -5,7 +5,7 @@ import csv
 url = 'https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv'
 
 r = requests.get(url)
-csvfile = 'taxi_zone_lookup.csv'
+csvfile = '/root/taxi_zone_lookup.csv'
 
 
 with open(csvfile, 'wb') as file:
